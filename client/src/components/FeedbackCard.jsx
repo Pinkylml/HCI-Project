@@ -66,6 +66,7 @@ const FeedbackCard = ({ feedback }) => {
               ? "No hay más preguntas del nivel, seleccionando una aleatoria..."
               : "Modo aleatorio activado. Seleccionando una pregunta al azar...")
             : feedback.nextLevelInfo}
+
         </p>
       )}
 

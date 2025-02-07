@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import axios from "axios";
 
+
 const useGame = (userEmail, isIAEnabled) => {
+
   const [questions, setQuestions] = useState([]);
   const [topics, setTopics] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -41,7 +43,7 @@ const useGame = (userEmail, isIAEnabled) => {
       details: questions[currentQuestionRef.current]?.feedback,
       nextLevelInfo: null,
       randomized: false,
-      nextLevel: null,
+        nextLevel: null,
     });
 
     if (isCorrect) {
@@ -65,7 +67,6 @@ const useGame = (userEmail, isIAEnabled) => {
         if (gameOver) return;  // Prevenir actualizaciones después de que el juego termine
 
         console.log(`Preguntas restantes: ${questions.length - (currentQuestionRef.current + 1)}`);
-
         let randomized = false;
         let nextQuestionIndex = -1;
 
